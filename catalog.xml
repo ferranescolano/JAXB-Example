@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/alu2014044/Documents/NetBeansProjects/Practica4JAXB/sudoku.xsd" uri="xml-resources/jaxb/JAXBinding/sudoku.xsd"/>
+    <system systemId="file:/C:/Users/alu2014044/Documents/NetBeansProjects/Practica4JAXB/usuarios.xsd" uri="xml-resources/jaxb/Usuarios/usuarios.xsd"/>
+    <system systemId="file:/C:/Users/alu2014044/Documents/NetBeansProjects/Practica4JAXB/historial.xsd" uri="xml-resources/jaxb/Historiales/historial.xsd"/>
+</catalog>

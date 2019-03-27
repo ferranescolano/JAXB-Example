@@ -1,0 +1,58 @@
+Se dispone del archivo sudokus.txt con la definici ón de 100 sudokus.
+El formato de este archivo consiste en bloques de 3 l íneas por
+Sudoku como estas:
+% 4 Medium (Level 4)
+27....4.6.687...915..61..2....8.791...7.6.2...821.4....5..83..214...685.8.
+3....69
+27139548636874259159461832763582791441756923898213467575698314214927685382
+3451769
+La primera línea contiene un símbolo “%” seguido del número asociado
+a la dificultad (1=muy fácil; etc.) y un texto explicativo de la
+dificultad.
+La segunda línea contiene el problema del Sudoku. Son 81 caracteres
+(9x9), donde el “.” Indica que las celdas que deben estar vac ías.
+La tercera línea contiene la solución del Sudoku.
+Se desea trasladar la información contenida en dicho archivo a un
+único archivo XML. El formato deseado para dicho archivo ser á como
+se muestra aquí:
+<sudokus>
+<sudoku level=”4” description=”Medium”>
+<problem>
+ 27....4.6.687...915..61..2....8.791...7.6.2...821.4....5..83..214...685.
+8.3....69
+</problem>
+<solved>
+ 271395486368742591594618327635827914417569238982134675756983142149276853
+823451769
+</solved>
+</sudoku>
+…
+</sudokus>
+Con todo esto en mente, se pide:
+a) Define el esquema del XML asociado a la tarea mostrada para el
+formato indicado.
+b) La aplicación, si no lo ha hecho anteriormente, deber á crear el
+fichero XML volcando los datos de los 100 sudokus que hay en el
+fichero .txt.
+
+c) Se deberá implementar el código necesario para poder guardar los
+datos de los usuarios que utilizar án la aplicación. De un usuario se
+guarda nombre completo, nombre de usuario y contrase ña.
+d) Se deberá implementar el código necesario para registrar los
+historiales. Cada historial indicará qué jugador ha jugado qué
+sudoku y en qué tiempo lo ha completado.
+e) Se deberá definir los esquemas para los ficheros XML de los
+puntos c y d y utilizar la tecnología JAXB para la persistencia de
+todos los datos.
+La aplicación deberá permitir:
+1. Registrar un usuario.
+2. Validar la entrada de un usuario.
+3. Una vez logueado el usuario podrá:
+3.1 Modificar contraseña. Deberá pedir contraseña actual y
+verificación de la nueva contraseña.
+3.2 Obtener un sudoku aleatoriamente de entre los que el
+usuario NO HA JUGADO TODAVÍA (para iniciar una nueva partida).
+3.3 Indicar que se ha terminado el sudoku, indicando el tiempo
+total del juego.
+3.4 Ver tiempo medio del jugador.
+4. Obtener el ranking de los usuarios (menor tiempo medio primero).
